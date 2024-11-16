@@ -25,7 +25,7 @@ export const ApiProvider = ({ children }) => {
       setLoading(false);
     }
   }; */
-  function getData(vegpont) {
+  function getData(vegpont, fv) {
     setLoading(true);
     setError(null);
     // saját axios példányt használjuk
@@ -38,7 +38,7 @@ export const ApiProvider = ({ children }) => {
       setLoading(false);
     } */
     myAxios
-      .get(vegpont,fv)
+      .get(vegpont)
       .then(function (response) {
         // handle success
         fv(response.data);
