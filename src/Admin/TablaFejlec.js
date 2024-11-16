@@ -1,19 +1,15 @@
-import React from "react";
+import React from 'react';
 
-function TablaFejlec(props) {
+const TablaFejlec = ({ oszlopok }) => {
   return (
-    <tr>
-      {Object.entries(props.termek).map(([kulcs, value]) => {
-        if (kulcs !== "rating") {
-          return <th key={kulcs}>{kulcs}</th>
-        } else {
-          return (null)
-        }
-      })}
-      <th></th>
-      <th></th>
-    </tr>
+    <thead>
+      <tr>
+        {oszlopok.map((oszlop, index) => (
+          <th key={index}>{oszlop}</th>
+        ))}
+      </tr>
+    </thead>
   );
-}
+};
 
 export default TablaFejlec;

@@ -1,30 +1,20 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Termekek from './Public/Termekek';
-import Admin from './pages/Admin.js'
-import NoPage from "./pages/NoPage.js";
+import TermekekAdmin from './Admin/TermekekAdmin';
+import UjTermek from './Admin/UjTermek';
 
-
-
-const App = () => {
-    console.log('App.js betöltve');
-    return (
-      <div className="container">
-        <header className="">
-          <h1>FakeStore Webáruház</h1>
-        </header>
-  
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Public />} />
-              <Route path="admin" element={<Admin />} />
-              <Route path="*" element={<NoPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </div>
-    );
-  };
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Termekek />} />
+        <Route path="admin" element={<TermekekAdmin />} />
+        <Route path="admin/uj" element={<UjTermek />} />
+      </Route>
+    </Routes>
+  </Router>
+);
 
 export default App;
