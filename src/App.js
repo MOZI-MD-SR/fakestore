@@ -1,18 +1,19 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Layout.js';
-import Termekek from './Public/Termekek.js';
+import Layout from './Layout';
+import Termekek from './Public/Termekek';
 
-const Admin = () => <div>Admin felület tartalom</div>;
+const Admin = () => {
+    console.log('Admin felület betöltve');
+    return <div>Admin felület tartalom</div>;
+};
 
 const App = () => {
+    console.log('App.js betöltve');
     return (
         <Router>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    {/* Publikus oldal */}
                     <Route index element={<Termekek />} />
-                    {/* Admin oldal */}
                     <Route path="admin" element={<Admin />} />
                 </Route>
             </Routes>

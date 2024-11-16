@@ -1,6 +1,7 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link } from 'react-router-dom';
 
 const Layout = () => {
+    console.log('Layout komponens betöltve');
     return (
         <>
             <header style={{ padding: '10px 20px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #ccc' }}>
@@ -27,7 +28,6 @@ const Layout = () => {
                 </ul>
             </nav>
             <main style={{ padding: '20px' }}>
-                {/* Az aktuális útvonal tartalma ide töltődik be */}
                 <Outlet />
             </main>
             <footer style={{ padding: '10px 20px', backgroundColor: '#f8f9fa', borderTop: '1px solid #ccc', marginTop: '20px', textAlign: 'center' }}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Termek = ({ termek, kosarbaHelyez, torles }) => {
     return (
@@ -11,10 +11,21 @@ const Termek = ({ termek, kosarbaHelyez, torles }) => {
             <h3>{termek.title}</h3>
             <p>{termek.description.slice(0, 100)}...</p>
             <p style={{ fontWeight: 'bold' }}>{termek.price} $</p>
-            <button onClick={() => kosarbaHelyez(termek)} style={{ marginRight: '10px' }}>
+            <button
+                id={`kosarba-${termek.id}`}
+                name={`kosarba-${termek.id}`}
+                onClick={() => kosarbaHelyez(termek)}
+                style={{ marginRight: '10px' }}
+            >
                 Kosárba
             </button>
-            <button onClick={() => torles(termek.id)}>Törlés</button>
+            <button
+                id={`torles-${termek.id}`}
+                name={`torles-${termek.id}`}
+                onClick={() => torles(termek.id)}
+            >
+                Törlés
+            </button>
         </div>
     );
 };
