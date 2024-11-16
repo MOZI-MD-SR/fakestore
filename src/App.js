@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
-import Termekek from '.Public/Termekek';
+import Layout from './Layout.js';
+import Termekek from './Public/Termekek.js';
 
 const Admin = () => <div>Admin felület tartalom</div>;
 

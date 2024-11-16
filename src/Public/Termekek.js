@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Termek from '.Public/Termek';
+import Termek from './Termek.js';
 
 const Termekek = () => {
     const [termekek, setTermekek] = useState([]);
